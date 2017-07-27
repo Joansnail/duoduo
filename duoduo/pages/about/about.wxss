@@ -1,0 +1,26 @@
+page {
+    text-align: center;
+}
+
+.icon {
+    width: 120rpx;
+    height: 120rpx;
+    margin-top: 100rpx;
+    background-color: #fff;
+    border-radius: 24rpx;
+}
+
+.name {
+    font-size: 32rpx;
+    margin-top: 35rpx;
+}
+
+.version {
+    color: #999999;
+}
+
+.introduction {
+    width: 580rpx;
+    margin: 40rpx auto;
+    text-align: left;
+}

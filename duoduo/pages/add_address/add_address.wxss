@@ -1,0 +1,56 @@
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+.info_item{
+    padding: 0 20rpx;
+    background-color: #fff;
+    box-sizing: border-box;
+    height: 88rpx;
+    line-height: 88rpx;
+    border-bottom: 1rpx solid #e5e5e5;
+}
+.title{
+    font-size: 26rpx;
+    color: #666666;
+    float: left;
+}
+.input, .placeholder-input{
+    height: 88rpx;
+    line-height: 88rpx;
+    color: #666666;
+    font: inherit;
+    font-size: 26rpx;
+}
+.arrow{
+    background-image: url(https://static.sesine.com/mina/images/arrow-right.svg);
+    background-position: 725rpx center;
+    background-repeat: no-repeat;
+    background-size: 14rpx 26rpx;
+}
+.set{
+    height: 88rpx;
+    line-height: 88rpx;
+    background: #fff;
+    margin-top: 24rpx;
+    border-top: 1rpx solid #e5e5e5;
+    border-bottom: 1rpx solid #e5e5e5;
+    padding:0 20rpx;
+    font-size: 26rpx;
+    color: #666666
+}
+.switch{
+    float: right;
+}
+.bottom_button{
+    width: 650rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 26rpx;
+    color: #fff;
+    background: #e02128;
+    margin: 40rpx auto 0;
+}

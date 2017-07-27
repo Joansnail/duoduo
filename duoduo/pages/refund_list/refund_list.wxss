@@ -1,0 +1,54 @@
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+.goods{
+    background: #fff;
+    margin-bottom: 20rpx;
+}
+.info{
+    position: relative;
+    padding:20rpx;
+    border-bottom: 1rpx solid #e5e5e5;
+}
+.info image{
+    width: 200rpx;
+    height: 150rpx;
+    float: left;
+    margin-right: 15rpx;
+}
+.title{
+    font-size: 26rpx;
+    color: #333333;
+    padding-right: 100rpx;
+}
+.price{
+    font-size: 26rpx;
+    color: #333333;
+    position: absolute;
+    top:20rpx;
+    right: 20rpx;
+}
+.num{
+    font-size: 22rpx;
+    color: #999999;
+    position: absolute;
+    top:70rpx;
+    right: 20rpx;
+}
+.pay_price{
+    font-size: 26rpx;
+    color: #333333;
+    padding:20rpx 0;
+    text-align: right;
+    border-bottom: 1rpx solid #e5e5e5;
+}
+.refund_type{
+    float: left;
+    padding-left: 20rpx;
+    color: #e02128;
+    font-size: 24rpx;
+}

@@ -1,0 +1,7 @@
+<block wx:for="{{massage}}" wx:for-index="messageIndex" wx:for-item="messageItem">
+    <view class="message_item clearfix">
+        <view class="title">系统消息：{{messageItem.title}}</view>
+        <view class="content">{{messageItem.content}}</view>
+        <view class="time">{{messageItem.time}}</view>
+    </view>
+</block>

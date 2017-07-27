@@ -1,0 +1,11 @@
+<view class="star_box clearfix">
+    <view class="star {{star >= 1?'on-click':''}}" data-index="1" bindtap="starOn"></view>
+    <view class="star {{star >= 2?'on-click':''}}" data-index="2" bindtap="starOn"></view>
+    <view class="star {{star >= 3?'on-click':''}}" data-index="3" bindtap="starOn"></view>
+    <view class="star {{star >= 4?'on-click':''}}" data-index="4" bindtap="starOn"></view>
+    <view class="star {{star >= 5?'on-click':''}}" data-index="5" bindtap="starOn"></view>
+</view>
+<view class="text">
+    <textarea placeholder="请你输入对订单的评价" placeholder-style="color:#cbcbcb;" class="text_con"/>
+</view>
+<button class="bottom_button">确定</button>

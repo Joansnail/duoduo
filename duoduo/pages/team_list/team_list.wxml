@@ -1,0 +1,40 @@
+<view class="status_list clearfix">
+    <view class="{{orderStatus == 0? 'onIt':''}}" data-status="0"  bindtap="changeStatus">全部</view>
+    <view class="{{orderStatus == 2? 'onIt':''}}" data-status="2" bindtap="changeStatus">待成团</view>
+    <view class="{{orderStatus == 3? 'onIt':''}}" data-status="3" bindtap="changeStatus">已成团</view>
+    <view class="{{orderStatus == 6? 'onIt':''}}" data-status="6" bindtap="changeStatus">拼团失败</view>
+</view> 
+<view class="goods_list">
+    <block wx:if="{{teamList.length > 0}}">
+        <block wx:for="{{teamList}}" wx:for-index="teamIndex" wx:for-item="teamItem">
+            <view class="goods" data-status="{{teamItem.status}}" data-id="{{teamItem.id}}" bindtap="viewOrder">
+                <view class="info clearfix" bindtap="viewTeam" data-teamid="{{teamItem.team_id}}">
+                    <image src="{{teamItem.pic}}"></image>
+                    <view class="title">{{teamItem.title}}</view>
+                    <view class="num">{{teamItem.num}}人团</view>
+                    <view class="price">{{teamItem.price}}</view>
+                </view>
+                <view class="button clearfix">
+                    <block wx:if="{{teamItem.status == 1 || teamItem.status == 2}}">
+                        <view class="order_type">待成团</view>
+                        <button class="go-pay">邀请好友拼团</button>
+                        <button class="cancel" bindtap="viewDetail" data-id="{{teamItem.id}}">查看订单详情</button>
+                    </block>
+                    <block wx:if="{{teamItem.status == 3 || teamItem.status == 4}}">
+                        <view class="order_type">拼团成功</view>
+                        <button class="go-pay" bindtap="viewTeam" data-teamid="{{teamItem.team_id}}">查看团详情</button>
+                        <button class="cancel" bindtap="viewDetail" data-id="{{teamItem.id}}">查看订单详情</button>
+                    </block>
+                    <block wx:if="{{teamItem.status == 6}}">
+                        <view class="order_type">拼团失败</view>
+                        <button class="go-pay">邀请好友拼团</button>
+                        <button class="cancel" bindtap="viewDetail" data-id="{{teamItem.id}}">查看订单详情</button>
+                    </block>
+                </view>
+            </view>
+        </block>
+    </block>
+    <block wx:else>
+        <view class="empty-order"><image src="https://static.sesine.com/mina/images/no-order.svg"></image>您还没有相关订单</view>
+    </block>
+</view>

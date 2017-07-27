@@ -1,0 +1,32 @@
+<view class="category">
+    <block wx:for="{{categoryList}}" wx:for-item="categoryItem" wx:for-index="categoryIndex" wx:key="category">
+        <view class="category-item {{categoryItem.id == categoryItemId ? 'category-item-active' : ''}}" data-id="{{categoryItem.id}}" bindtap="changeCategory">
+            {{categoryItem.title_name}}
+        </view>
+    </block>
+</view>
+<view class="sub-category">
+    <block wx:for="{{categoryList}}" wx:for-item="categoryItem" wx:for-index="categoryIndex" wx:key="category">
+        <block wx:for="{{categoryItem.title_sub}}" wx:for-item="categorySubItem" wx:for-index="categorySubIndex" wx:key="categorySub">
+            <view class="sub-category-item {{categorySubItem.id == categorySubItemId ? 'sub-category-item-active' : ''}}" data-id="{{categorySubItem.id}}" wx:if="{{categoryItem.id == categoryItemId}}" bindtap="changeSubCategory">
+                <image class="sub-category-icon" src="{{categorySubItem.icon_path}}"></image>
+                <view>{{categorySubItem.title_name}}</view>
+            </view>
+        </block>
+    </block>
+</view>
+
+<view class="product">
+    <block wx:for="{{productList}}" wx:for-item="productItem" wx:for-index="productIndex" wx:key="product">
+        <view class="product-item" data-id="{{productItem.id}}" bindtap="viewProductDetail">
+            <image class="product-cover" src="{{productItem.pic}}"></image>
+            <view class="product-intro">
+                {{productItem.title}}
+                <view class="product-description">
+                    <view class="product-price">{{productItem.price}}元</view>
+                    <view class="product-sales">{{productItem.team_num}}人团已团，{{productItem.had_team >= 10000 ? productItem.had_team/10000 : productItem.had_team}}万件</view>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

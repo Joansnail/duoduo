@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<block wx:if="{{loading}}">
+    <view class="loading"><image src="../../images/laoding.gif"></image></view>
+</block>
+<swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="banner">
+    <block wx:for="{{picList}}" wx:for-item="item" wx:key="url">
+        <swiper-item>
+            <image src="{{item.pic}}" class="slider-img"></image>
+        </swiper-item>
+    </block>
+</swiper>
+<view class="second-level-kinds">
+    <block wx:for="{{indexList}}" wx:for-index="index" wx:for-item="indexItem">
+        <view class="kinds-item" bindtap="viewList" data-id="{{indexItem.id}}"><image src="{{indexItem.icon_path}}" class="kinds-img"></image>{{indexItem.list_name}}</view>
+    </block>
+</view>
+<block wx:for="{{itemList}}" wx:for-index="itemIndex" wx:for-item="listItem">
+    <view class="index_item" bindtap="viewProduct" data-id="{{listItem.id}}">
+        <image src="{{listItem.pic}}" class="item-img"></image>
+        <view class="item-title">{{listItem.title}}</view>
+        <view class="team-num">{{listItem.team_num}}人团</view>
+        <view class="team-price">￥{{listItem.team_price}}</view>
+        <view class="single-price">单买价 {{listItem.single_price}}</view>
+        <button class="go-team">去开团</button>
+    </view>
+</block>

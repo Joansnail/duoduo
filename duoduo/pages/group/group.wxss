@@ -1,0 +1,133 @@
+.product-intro {
+    box-sizing: border-box;
+    display: flex;
+    width: 750rpx;
+    height: 250rpx;
+    padding: 30rpx 20rpx;
+    background-color: #fff;
+}
+
+.product-cover {
+    width: 300rpx;
+    height: 190rpx;
+    border-radius: 8rpx;
+}
+
+.product-info {
+    margin-left: 30rpx;
+    width: 385rpx;
+}
+
+.product-title {
+    margin-bottom: 20rpx;
+    font-size: 26rpx;
+}
+
+.product-description {
+    color: #999999;
+}
+
+.member {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20rpx;
+}
+
+.member-avatar {
+    width: 80rpx;
+    height: 80rpx;
+    margin: 0 10rpx 10rpx;
+    border-radius: 80rpx;
+}
+
+.member-account {
+    margin-top: 10rpx;
+    margin-bottom: 25rpx;
+    text-align: center;
+}
+
+.member-num {
+    font-size: 30rpx;
+    color: #ea0c17;
+}
+
+.rule-intro {
+    text-align: center;
+    color: #cccccc;
+}
+
+.remaining-time {
+    margin-top: 50rpx;
+    text-align: center;
+}
+
+.time-snippet {
+    display: inline-block;
+    width: 60rpx;
+    height: 60rpx;
+    margin: 0 18rpx;
+    line-height: 60rpx;
+    text-align: center;
+    border-radius: 6rpx;
+    background-color: #999999;
+    color: #fff;
+}
+
+.bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    
+    width: 100%;
+    height: 108rpx;
+    font-size: 30rpx;
+    color: #fff;
+    background-color: #df2127;
+}
+
+.bar-btn {
+    width: 50%;
+    height: 108rpx;
+    text-align: center;
+    line-height: 108rpx;
+}
+
+.more-group {
+    background-color: #ff949e;
+}
+
+.show-group-detail {
+    margin-top: 44rpx;
+    margin-bottom: 50rpx;
+    text-align: center;
+}
+
+.member-item-leader {
+    color: #fff;
+    background-color: #999999 !important;
+}
+
+.member-item {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    height: 70rpx;
+    padding: 0 20rpx;
+    margin-bottom: 20rpx;
+    line-height: 70rpx;
+    background-color: #fff;
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+}
+
+.member-detail-avatar {
+    display: inline-block;
+    height: 44rpx;
+    width: 44rpx;
+    border-radius: 44rpx;
+    margin-right: 20rpx;
+    margin-bottom: -10rpx;
+}

@@ -1,0 +1,53 @@
+page {
+    background-color: #fff;
+}
+
+.comment-list {
+    background-color: #fff;
+}
+
+.comment-item {
+    padding: 20rpx;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.comment-userinfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20rpx;
+}
+
+.comment-avatar {
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50rpx;
+    margin-right: 10rpx;
+}
+
+.comment-info {
+    display: flex;
+    justify-content: space-between;
+    width: 640rpx;
+    height: 50rpx;
+    position: relative;
+}
+
+.comment-star {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.comment-star-item {
+    width: 20rpx;
+    height: 20rpx;
+    margin-right: 5rpx;
+    background-image: url(https://static.sesine.com/mina/images/star.png);
+    background-color: #ccc;
+    background-size: cover;
+}
+
+.comment-star-active {
+    background-color: red;
+}

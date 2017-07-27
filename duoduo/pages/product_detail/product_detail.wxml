@@ -1,0 +1,104 @@
+<swiper indicator-dots="true" class="pic">
+    <block wx:for="{{productDetail.pic}}" wx:for-item="picItem" wx:key="pic">
+        <swiper-item>
+            <image src="{{picItem}}" class="pic"></image>
+        </swiper-item>
+    </block>
+</swiper>
+<view class="header">
+    <view class="sales-condition">
+        <view class="price-info">
+            <view class="price">￥{{productDetail.team_price}}</view>
+            <view class="original-price">{{productDetail.old_price}}</view>
+        </view>
+        <view class="sales-amount">
+            累计销量{{productDetail.sales_amount}}笔
+        </view>
+    </view>
+    <view class="title">{{productDetail.title}}</view>
+    <view class="description">{{productDetail.description}}</view>
+</view>
+<view class="tip">
+    <block wx:for="{{productDetail.tips}}" wx:for-item="tipItem" wx:key="tip">
+        <view class="tip-item">{{tipItem}}</view>
+    </block>
+</view>
+<view class="group-tip">支付开团并邀请{{productDetail.team_num - 1}}人参团，人数不足自动退款</view>
+<view class="group-info">以下小伙伴正在发起团购，您可以直接参与</view>
+<view class="group">
+    <block wx:for="{{productDetail.had_team}}" wx:for-item="groupItem" wx:key="group">
+        <view class="group-item">
+            <view class="group-item-wrap">
+                <image class="group-leader-avatar" src="{{groupItem.team_host}}"></image>
+                <view class="group-leader-name">{{groupItem.name}}</view>
+                <view class="group-leader-city">{{groupItem.location}}</view>
+                <view class="group-remain">还差人{{productDetail.team_num - groupItem.had_num}}成团</view>
+                <view class="group-remain-time">还剩{{groupItem.remain_time}}结束</view>
+                <view class="group-btn" data-id="{{groupItem.id}}" bindtap="viewGroup">去参团</view>
+            </view>
+        </view>
+    </block>
+</view>
+<view class="comment-title">
+    <view>用户评价</view>
+    <view>共{{productDetail.comment.num}}条评价</view>
+</view>
+<view class="comment-list">
+    <block wx:for="{{productDetail.comment.con}}" wx:for-item="commentItem" wx:key="comment">
+        <view class="comment-item">
+            <view class="comment-userinfo">
+                <image class="comment-avatar" src="{{commentItem.icon}}"></image>
+                <view class="comment-info">
+                    <view class="comment-user">{{commentItem.name}}</view>
+                    <view class="comment-time">{{commentItem.time}}</view>
+                </view>
+            </view>
+            <view class="comment-content">{{commentItem.text}}</view>
+        </view>
+    </block>
+</view>
+<view class="detail">
+    <block wx:for="{{productDetail.detail_pic}}" wx:for-item="detailPicItem" wx:for-index="detailPicIndex" wx:key="detail">
+        <image bindload="changeImageSize" data-index="{{detailPicIndex}}" src="{{detailPicItem}}" class="detail-pic" style="width: {{imageSize[detailPicIndex].width}}rpx;height: {{imageSize[detailPicIndex].height}}rpx"></image>
+    </block>
+</view>
+<view class="bar">
+    <view class="bar-btn bar-btn-home" bindtap="viewHome">首页</view>
+    <view class="bar-btn bar-btn-service">客服</view>
+    <view class="bar-favorite" bindtap="collect"><view class="bar-btn-favorite {{productDetail.is_favorite == 1?'favorite-on':''}}"></view>收藏</view>
+    <view class="buy-single" bindtap="viewProperty" data-type="0">
+        <view>{{productDetail.single_price}}</view>
+        <view>单独购买</view>
+    </view>
+    <view class="buy-group" bindtap="viewProperty" data-type="1">
+        <view>{{productDetail.team_price}}</view>
+        <view>{{productDetail.team_num}}人成团</view>
+    </view>
+</view>
+<view class="property" hidden="{{!showProperty}}">
+    <view class="property-item intro">
+        <image class="thumb" src="{{sku.product_pic}}"></image>
+        <view>
+            <view>{{sku.title}}</view>
+            <view class="price">￥{{price}}</view>
+        </view>
+    </view>
+    <view class="property-item">
+        <view class="property-item-title">套装类型</view>
+        <view class="sku">
+            <block wx:for="{{sku.sku}}" wx:for-item="skuItem" wx:for-index="skuIndex" wx:key="sku">
+                <view class="sku-item {{sku_id == skuItem.id ? 'sku-item-active' : ''}}" data-id="{{skuItem.id}}" data-stock="{{skuItem.stock}}" data-index="{{skuIndex}}" bindtap="changeSku">{{skuItem.name}}</view>
+            </block>
+        </view>
+    </view>
+    <view class="property-item">
+        <view class="property-item-title">数量</view>
+        <view class="num-choose">
+            <view class="num-reduce" bindtap="reduceNum">-</view>
+            <view class="num">{{num}}</view>
+            <view class="num-add" bindtap="addNum">+</view>
+        </view>
+    </view>
+    <view class="buy-confirm-btn" bindtap="buy">确认购买</view>
+</view>
+<view class="mask" bindtap="hideProperty" hidden="{{!showProperty}}"></view>

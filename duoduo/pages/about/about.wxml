@@ -1,0 +1,4 @@
+<image src="{{app.icon}}" class="icon"></image>
+<view class="name">{{app.name}}</view>
+<view class="version">当前版本 {{app.version}}</view>
+<view class="introduction">{{app.introduction}}</view>

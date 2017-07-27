@@ -1,0 +1,10 @@
+<view class="cells">
+    <navigator class="cell" url="../question_list/question_list">
+        <view class="icon question-icon"></view>
+        常见问题
+    </navigator>
+    <navigator class="cell" url="../service_agreement/service_agreement">
+        <view class="icon agreement-icon"></view>
+        服务协议
+    </navigator>
+</view>

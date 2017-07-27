@@ -1,0 +1,11 @@
+
+<view class="cells">
+    <block wx:for="{{questionList}}" wx:for-item="questionItem" wx:key="question">
+        <navigator class="cell" url="../question_detail/question_detail?id={{questionItem.id}}">
+            {{questionItem.question}}
+        </navigator>
+    </block>
+    <navigator class="cell" url="../about/about">
+        关于我们
+    </navigator>
+</view>

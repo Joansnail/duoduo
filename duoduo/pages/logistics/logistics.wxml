@@ -1,0 +1,16 @@
+<view class="head clearfix">
+    <image src="https://static.sesine.com/mina/images/index20170101.jpg" class="head-img"></image>
+    <view class="head-title">物流状态：派送中</view>
+    <view class="head-title">物流公司：{{logistics.name}}</view>
+    <view class="head-title">运单编号：{{logistics.number}}</view>
+    <view class="head-title">官方电话：{{logistics.phone}}</view>
+</view>
+<view class="title">物流详情</view>
+<view class="content">
+    <block wx:for="{{logistics.info}}" wx:for-index="logisticsIndex" wx:for-item="logisticsItem">
+        <view class="content-item {{logisticsIndex == 0?'yellow':''}}">
+            <view class="address">{{logisticsItem.addresss}}</view>
+            {{logisticsItem.time}}
+        </view>
+    </block>
+</view>

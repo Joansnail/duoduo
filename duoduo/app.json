@@ -1,0 +1,58 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/new/new",
+    "pages/my/my",
+    "pages/product/product",
+    "pages/product_detail/product_detail",
+    "pages/pay/pay",
+    "pages/choose_address/choose_address",
+    "pages/group/group",
+    "pages/order_list/order_list",
+    "pages/order_detail/order_detail",
+    "pages/setting/setting",
+    "pages/comment/comment",
+    "pages/question_list/question_list",
+    "pages/question_detail/question_detail",
+    "pages/service_agreement/service_agreement",
+    "pages/refund/refund",
+    "pages/about/about",
+    "pages/favorite/favorite",
+    "pages/refund_list/refund_list",
+    "pages/team_list/team_list",
+    "pages/message/message",
+    "pages/logistics/logistics",
+    "pages/comment_list/comment_list",
+    "pages/add_address/add_address",
+    "pages/test/test"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#e02128",
+    "navigationBarTitleText": "拼多多",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "selectedColor": "#df2127",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home_active.png"
+    }, {
+      "pagePath": "pages/new/new",
+      "text": "上新",
+      "iconPath": "images/new.png",
+      "selectedIconPath": "images/new_active.png"
+    }, {
+      "pagePath": "pages/my/my",
+      "text": "个人中心",
+      "iconPath": "images/my.png",
+      "selectedIconPath": "images/my_active.png"
+    }
+    ]
+  },
+  "debug": true
+}

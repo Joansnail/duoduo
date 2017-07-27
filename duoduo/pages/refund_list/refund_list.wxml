@@ -1,0 +1,19 @@
+<block wx:for="{{refundList}}" wx:for-index="refundIndex" wx:for-item="refundItem">
+    <view class="goods" bindtap="viewOrder" data-id="{{refundItem.id}}">
+        <view class="info clearfix">
+            <image src="{{refundItem.pic}}"></image>
+            <view class="title">{{refundItem.title}}</view>
+            <view class="price">{{refundItem.price}}</view>
+            <view class="num">X{{refundItem.num}}</view>
+        </view>
+        <view class="pay_price">
+            <block wx:if="{{refundItem.refund_status == 1}}">
+                <view class="refund_type">退款中</view>
+            </block>
+            <block wx:elif="{{refundItem.refund_status == 2}}">
+                <view class="refund_type">交易成功，有退款</view>
+            </block>
+            实付： {{refundItem.total_price}}（免运费）
+        </view>
+    </view>
+</block>

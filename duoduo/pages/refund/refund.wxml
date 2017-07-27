@@ -1,0 +1,16 @@
+<view class="title">售后类型</view>
+<view class="item" bindtap="changeType" data-id="0">
+    我要退款
+    <icon type="{{typeId == 0?'success':'circle'}}" color="{{typeId == 0?'#ff4536':''}}" class="icon_btn"></icon>
+</view>
+<view class="item" bindtap="changeType" data-id="1">
+    我要退货
+    <icon type="{{typeId == 1?'success':'circle'}}" color="{{typeId == 1?'#ff4536':''}}" class="icon_btn"></icon>
+</view>
+<view class="title">退款金额（最多￥92）</view>
+<view class="amount">
+    <input class="amount_input" placeholder="请输入退款金额" value="{{refunAmount}}" />
+</view>
+<view class="title">退款说明</view>
+<textarea class="textarea" placeholder="请输入退款说明"/>
+<button class="bottom_button" bindtap="sureApply">提交申请</button>

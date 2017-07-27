@@ -1,0 +1,41 @@
+<view class="product-intro">
+    <image class="product-cover" src="{{group.pic}}"></image>
+    <view class="product-info">
+        <view class="product-title">{{group.title}}</view>
+        <view class="product-description">{{group.description}}</view>
+        <view class="product-group-accout">{{group.team_num}}人团 ￥{{group.team_price}} ￥{{group.old_price}}</view>     
+    </view>
+</view>
+<view class="member">
+    <block wx:for="{{group.member}}" wx:for-item="memberItem" wx:key="member">
+        <image class="member-avatar" src="{{memberItem.icon}}"></image>
+    </block>
+</view>
+<view class="member-account">还差<text class="member-num">{{group.team_num - group.had_num}}</text>人，快邀请好友一起参团吧~</view>
+<view class="rule-intro">拼团规则介绍>></view>
+
+<view class="remaining-time">剩余<view class="time-snippet">24</view>:<view class="time-snippet">00</view>:<view class="time-snippet">00</view>结束</view>
+
+<view class="show-group-detail">查看全部参团详情</view>
+
+<view class="member-detail">
+    <block wx:for="{{group.member}}" wx:for-item="memberItem" wx:key="member">
+        <view class="member-item {{memberItem.type == 0 ? 'member-item-leader' : ''}}">
+            <view>
+                <image class="member-detail-avatar" src="{{memberItem.icon}}"></image>
+                <block wx:if="{{memberItem.type == 0}}">团长 </block>
+                <text>{{memberItem.name}}</text>
+            </view>
+            <view>
+                <text>{{memberItem.time}}</text>
+                <block wx:if="{{memberItem.type == 0}}">开团</block>
+                <block wx:else>参团</block>
+            </view>
+        </view>
+    </block>
+</view>
+
+<view class="bar">
+    <view class="bar-btn more-group">更多拼团</view>
+    <view class="bar-btn">还差{{remainingMember}}人拼团成功</view>
+</view>

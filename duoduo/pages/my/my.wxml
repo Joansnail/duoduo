@@ -1,0 +1,34 @@
+<!--pages/my/my.wxml-->
+<view class="head">
+    <image src="https://static.sesine.com/mina/images/index20170101.jpg" class="head-pic"></image>
+    <view class="head-name">未登录</view>
+</view>
+<view class="check-all" data-status="0" bindtap="viewOrder">查看全部</view>
+<view class="order-way clearfix">
+    <view class="pending-pay" data-status="1" bindtap="viewOrder">待付款</view>
+    <view class="pending-team" data-status="2" bindtap="viewOrder">待成团</view>
+    <view class="pending-ship" data-status="3" bindtap="viewOrder">待发货</view>
+    <view class="pending-receipt" data-status="4" bindtap="viewOrder">待收货</view>
+    <view class="pending-comment" data-status="5" bindtap="viewOrder">待评价</view>
+</view>
+<view class="my-item clearfix">
+    <navigator url="../message/message" class="news">我的消息</navigator>
+    <!--<view class="news">我的消息</view>-->
+    <navigator class="coupon">我的优惠券</navigator>
+    <navigator url="../refund_list/refund_list" class="aftermarket">退款/售后</navigator>
+    <navigator class="team" url="../team_list/team_list">我的拼团</navigator>
+</view>
+<view class="other-item">
+    <view class="my-collect" bindtap="viewCollect">
+        我的收藏
+        <image src="https://static.sesine.com/mina/images/arrow-right.svg"></image>
+    </view>
+    <view class="my-address" bindtap="viewAddress">
+        收货地址
+        <image src="https://static.sesine.com/mina/images/arrow-right.svg"></image>
+    </view>
+    <view class="my-set" bindtap="viewSetting">
+        设置
+        <image src="https://static.sesine.com/mina/images/arrow-right.svg"></image>
+    </view>
+</view>

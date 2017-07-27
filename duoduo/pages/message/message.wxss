@@ -1,0 +1,28 @@
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+.message_item{
+    padding: 30rpx 20rpx 20rpx;
+    background: #fff;
+    border-bottom: 1rpx solid #e5e5e5;
+}
+.title{
+    font-size: 26rpx;
+    color: #666666;
+    margin-bottom: 20rpx;
+
+}
+.content{
+    font-size: 24rpx;
+    color: #999999;
+    margin-bottom: 40rpx;
+}
+.time{
+    font-size: 24rpx;
+    color: #999999;
+    float: right;
+}

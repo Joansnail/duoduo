@@ -1,0 +1,19 @@
+<view class="comment-list">
+    <block wx:for="{{comment}}" wx:for-item="commentItem" wx:key="comment">
+        <view class="comment-item">
+            <view class="comment-userinfo">
+                <image class="comment-avatar" src="{{commentItem.photo}}"></image>
+                <view class="comment-info">
+                    <view class="comment-user">{{commentItem.name}}</view>
+                    <view class="comment-time">{{commentItem.time}}</view>
+                    <view class="comment-star">
+                        <block wx:for="{{[1,2,3,4,5]}}" wx:for-index="starIndex" wx:key="star">
+                            <view class="comment-star-item {{starIndex < commentItem.red_star ? 'comment-star-active' : ''}}"></view>
+                        </block>
+                    </view>
+                </view>
+            </view>
+            <view class="comment-content">{{commentItem.text}}</view>
+        </view>
+    </block>
+</view>

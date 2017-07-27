@@ -1,0 +1,46 @@
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-item {
+    width: 370rpx;
+    margin-top: 10rpx;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.product-cover {
+    display: block;
+    width: 370rpx;
+    height: 370rpx;
+}
+
+.product-intro {
+    padding: 20rpx;
+}
+
+.product-description {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20rpx;
+}
+
+.product-price {
+    font-size: 24rpx;
+    color: #df2127;
+}
+
+.product-sales {
+    color: #999;
+}
+.head{
+    font-size: 26rpx;
+    color: #df2127;
+    text-align: center;
+    height: 100rpx;
+    line-height: 100rpx;
+    background: url(https://static.sesine.com/mina/images/new.svg) no-repeat 270rpx center;
+    background-size: 30rpx 30rpx;
+}

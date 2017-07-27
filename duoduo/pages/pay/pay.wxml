@@ -1,0 +1,31 @@
+<view class="add-address">
+    <view class="plus-icon">+</view>
+    手动添加收货地址
+    <image src="https://static.sesine.com/mina/images/arrow-right.svg" class="arrow-right"></image>
+</view>
+<view class="buy-info clearfix">
+    <image src="{{goodsInfo.product_pic}}" class="buy-pic"></image>
+    <view class="buy-title">{{goodsInfo.title}}</view>
+    <view class="buy-size">{{goodsInfo.sku.name}}</view>
+    <view class="buy-price">￥{{goodsInfo.price}}</view>
+</view>
+<view class="change_num clearfix">
+    购买数量
+    <view class="plus" bindtap="confirmPlus">+</view>
+    <view class="num">{{goodsNum}}</view>
+    <view class="reduce" bindtap="confirmReduce">-</view>
+</view>
+<view class="pay-title">选择支付方式</view>
+<view class="pay-way clearfix">
+    <image src="https://static.sesine.com/mina/images/wechat.svg" class="wechat-img"></image>
+    微信支付
+    <icon type="success"></icon>
+</view>
+<view class="pay-sure">
+    <button class="pay-btn" bindtap="surePay" data-id="{{id}}">确认支付</button>
+    <view class="pay-left">
+        <view class="total-num">共{{goodsNum}}件产品</view>
+        <view class="total-price">合计：</view>
+        <view class="red-price">￥{{totalPrice}}</view>
+    </view>  
+</view>

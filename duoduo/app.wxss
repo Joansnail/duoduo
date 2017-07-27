@@ -1,0 +1,6 @@
+page {
+  font-family: "微软雅黑";
+  font-size: 26rpx;
+  background: #f8f8f8;
+  color: #333;
+}

@@ -1,0 +1,18 @@
+page {
+    background-color: #fff;
+}
+
+.question {
+    box-sizing: border-box;
+    width: 100%;
+    height: 80rpx;
+    padding: 0 20rpx;
+    line-height: 80rpx;
+    font-size: 26rpx;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.answer {
+    padding: 20rpx;
+    color: #666666;
+}

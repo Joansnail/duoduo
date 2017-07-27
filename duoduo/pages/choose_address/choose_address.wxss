@@ -1,0 +1,104 @@
+.address-item{
+    background: #fff;
+    font-size: 26rpx;
+    color: #666666;
+    margin-bottom: 20rpx;
+}
+.top{
+    padding:30rpx 20rpx;
+    position: relative;
+    border-bottom: 1rpx solid #e5e5e5;
+}
+.person-info{
+
+}
+.address{
+    margin-top: 20rpx;
+}
+.use{
+    height: 40rpx;
+    padding:0 10rpx;
+    line-height: 40rpx;
+    border:1rpx solid #e5e5e5;
+    border-radius: 5rpx;
+    position: absolute;
+    top:50%;
+    right: 20rpx;
+    margin-top: -20rpx;
+    color: #999999
+}
+.bottom{
+    padding: 0 20rpx;
+    box-sizing: border-box;
+    height: 65rpx;
+    line-height: 65rpx;
+    font-size: 22rpx;
+    border-bottom: 1rpx solid #e5e5e5;
+}
+.default{
+   float: left;
+   margin-right: 15rpx;
+   margin-top: 10rpx;
+   color: #DF2127; 
+}
+.edit{
+    float: right;
+    margin-left: 10rpx;
+    color: #999999;
+    background: url(https://static.sesine.com/mina/images/edit.svg) no-repeat left center;
+    background-size: 20rpx 20rpx;
+    padding-left: 30rpx;
+}
+.del{
+    float: right;
+    color: #999999;
+    background: url(https://static.sesine.com/mina/images/cancel.svg) no-repeat left center;
+    background-size: 20rpx 20rpx;
+    padding-left: 30rpx;
+}
+.bottom image{
+    width: 20rpx;
+    height: 21rpx;
+    margin-right: 10rpx;
+}
+.add-btn{
+    height: 66rpx;
+    line-height: 66rpx;
+    text-align: center;
+    font-size: 24rpx;
+    color: #999999;
+    background: #fff;
+    border-top:1rpx solid #e5e5e5;
+    border-bottom: 1rpx solid #e5e5e5;
+}
+.use-it{
+    height: 46rpx;
+    width: 75rpx;
+    background: url(https://static.sesine.com/mina/images/red-icon.svg) no-repeat center center;
+    background-size:28rpx 20rpx;
+    position: absolute;
+    top:50%;
+    right: 20rpx;
+    margin-top: -23rpx;
+    background-color: #fff;
+    border: 1rpx solid #fff;
+}
+.set-default{
+    float: left;
+}
+.empty-address{
+    padding: 100rpx 0;
+}
+.empty-address image{
+    display: block;
+    width: 194rpx;
+    height: 150rpx;
+    margin: 0 auto;
+}
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}

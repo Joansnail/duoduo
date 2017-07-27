@@ -1,0 +1,26 @@
+<block wx:if="{{addressList.length >0}}">
+    <block wx:for="{{addressList}}" wx:for-index="addIndex" wx:for-item="addItem">
+        <view class="address-item" catchtap="useIt" data-id="{{addItem.id}}">
+            <view class="top">
+                <view class="person-info">{{addItem.name}} {{addItem.phone}}</view>
+                <view class="address">{{addItem.address}}</view>
+                <view class="use">使用</view>
+                <block wx:if="{{addItem.id == show}}">
+                    <view class="use-it"></view>
+                </block>
+            </view>
+            <view class="bottom clearfix">
+                <view data-id="{{addItem.id}}" catchtap="setTodefault" class="set-default">
+                    <icon type="{{default_address == addItem.id?'success':'circle'}}" size="20" class="default" data-id="{{addItem.id}}" color="{{default_address == addItem.id?'#D22728':''}}"></icon>
+                    已设为默认
+                </view>
+                <view data-id="{{addItem.id}}" data-index="{{addIndex}}" class="edit" bindtap="edit">编辑</view>
+                <view data-id="{{addItem.id}}" data-index="{{addIndex}}" class="del" bindtap="del">删除</view>
+            </view>
+        </view>
+    </block>
+</block>
+<block wx:else>
+    <view class="empty-address"><image src="https://static.sesine.com/mina/images/empty-address.svg"></image></view>
+</block>
+<navigator url="../add_address/add_address"class="add-btn">+ 添加新地址</navigator>

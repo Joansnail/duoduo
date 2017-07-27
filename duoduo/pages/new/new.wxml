@@ -1,0 +1,15 @@
+<view class="head">精选上新</view>
+<view class="product">
+    <block wx:for="{{newList}}" wx:for-item="newItem" wx:for-index="newIndex" wx:key="product">
+        <view class="product-item" data-id="{{newItem.id}}" bindtap="viewProduct">
+            <image class="product-cover" src="{{newItem.pic}}"></image>
+            <view class="product-intro">
+                {{newItem.title}}
+                <view class="product-description">
+                    <view class="product-price">{{newItem.price}}元</view>
+                    <view class="product-sales">{{newItem.team_num}}人团 ·{{newItem.time}}前</view>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

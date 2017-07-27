@@ -1,0 +1,137 @@
+/* pages/my/my.wxss */
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+.head{
+    height: 265rpx;
+    background: #BA1E2A;
+    position: relative;
+    line-height: 265rpx;
+    border-top: 1rpx solid #BA1E2A;
+}
+.head-pic{
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    position: absolute;
+    top:50%;
+    margin-top: -60rpx;
+    left: 10rpx;
+}
+.head-name{
+    font-size: 28rpx;
+    color: #fff;
+    margin-left: 150rpx;
+}
+.check-all{
+    height: 80rpx;
+    line-height: 80rpx;
+    background: url(https://static.sesine.com/mina/images/arrow-right.svg) no-repeat 724rpx center;
+    background-size: 12rpx 20rpx;
+    background-color: #fff;
+    padding-right: 40rpx;
+    text-align: right;
+    font-size: 24rpx;
+    color: #999999;
+    border-bottom: 1rpx solid #e5e5e5;
+}
+.order-way{
+    padding: 25rpx 0 20rpx 0;
+    background: #fff;
+    font-size: 24rpx;
+    color: #151516;
+    border-bottom: 1rpx solid #e5e5e5;
+}
+.order-way view{
+    width: 20%;
+    text-align: center;
+    float: left;
+    padding-top: 48rpx;
+}
+.pending-pay{
+    background: url(https://static.sesine.com/mina/images/my-die-pay.svg) no-repeat top center;
+    background-size: 50rpx 42rpx;
+}
+.pending-team{
+    background: url(https://static.sesine.com/mina/images/my-die-t.svg) no-repeat top center;
+    background-size: 50rpx 42rpx;
+}
+.pending-ship{
+    background: url(https://static.sesine.com/mina/images/my-die-f.svg) no-repeat top center;
+    background-size: 50rpx 42rpx;
+}
+.pending-receipt{
+    background: url(https://static.sesine.com/mina/images/my-die-get.svg) no-repeat top center;
+    background-size: 50rpx 42rpx;
+}
+.pending-comment{
+    background: url(https://static.sesine.com/mina/images/my-die-p.svg) no-repeat top center;
+    background-size: 50rpx 42rpx;
+}
+.my-item{
+   padding: 25rpx;
+   background: #fff; 
+   margin-top: 20rpx;
+   border-top:1rpx solid #e5e5e5;
+   border-bottom: 1rpx solid #e5e5e5;
+}
+.my-item navigator{
+    width: 25%;
+    text-align: center;
+    float: left;
+    padding-top: 60rpx;
+}
+.news{
+    background: url(https://static.sesine.com/mina/images/news.svg) no-repeat top center;
+    background-size: 60rpx 50rpx;
+    
+}
+.coupon{
+   background: url(https://static.sesine.com/mina/images/card.svg) no-repeat top center;
+   background-size: 60rpx 50rpx;
+}
+.aftermarket{
+   background: url(https://static.sesine.com/mina/images/aftermarket.svg) no-repeat top center;
+   background-size: 60rpx 50rpx;
+}
+.team{
+   background: url(https://static.sesine.com/mina/images/team.svg) no-repeat top center;
+   background-size: 60rpx 50rpx;
+}
+.other-item{
+    margin-top: 20rpx;
+    border-top:1rpx solid #e5e5e5;
+}
+.other-item view{
+    padding:25rpx 25rpx 25rpx 70rpx; 
+    font-size:  26rpx;
+    color: #151516;
+    background-color: #fff;
+    position: relative;
+    border-bottom: 1rpx solid #e5e5e5;
+}
+.my-collect{
+    background: url(https://static.sesine.com/mina/images/collect.svg) no-repeat 15rpx center;
+    background-size: 40rpx 40rpx;
+    
+}
+.other-item image{
+    width: 18rpx;
+    height: 28rpx;
+    position: absolute;
+    top:50%;
+    right: 25rpx;
+    margin-top: -14rpx;
+}
+.my-address{
+    background: url(https://static.sesine.com/mina/images/address.svg) no-repeat 15rpx center;
+    background-size: 40rpx 40rpx;
+}
+.my-set{
+    background: url(https://static.sesine.com/mina/images/set.svg) no-repeat 15rpx center;
+    background-size: 40rpx 40rpx;
+}

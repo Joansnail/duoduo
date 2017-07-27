@@ -1,0 +1,112 @@
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+.status_list{
+    background: #fff;
+    border-bottom: 1rpx solid #e5e5e5;
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100%;
+    background: #fff;
+    z-index: 99;
+}
+.status_list view{
+    width: 16.5%;
+    text-align: center;
+    padding:25rpx 0;
+    float: left;
+}
+.onIt{
+    border-bottom: 2rpx solid red;
+}
+.goods_list{
+    padding-top: 100rpx;
+}
+.goods{
+    background: #fff;
+    margin-bottom: 20rpx;
+}
+.info{
+    position: relative;
+    padding:20rpx;
+    border-bottom: 1rpx solid #e5e5e5;
+}
+.info image{
+    width: 200rpx;
+    height: 150rpx;
+    float: left;
+    margin-right: 15rpx;
+}
+.title{
+    font-size: 26rpx;
+    color: #333333;
+    padding-right: 100rpx;
+}
+.price{
+    font-size: 26rpx;
+    color: #333333;
+    position: absolute;
+    top:20rpx;
+    right: 20rpx;
+}
+.num{
+    font-size: 22rpx;
+    color: #999999;
+    position: absolute;
+    top:70rpx;
+    right: 20rpx;
+}
+.pay_price{
+    font-size: 26rpx;
+    color: #333333;
+    padding:20rpx 0;
+    text-align: right;
+    border-bottom: 1rpx solid #e5e5e5;
+}
+.button{
+    padding: 20rpx;
+    border-bottom: 1rpx solid #e5e5e5;
+}
+.button button{
+    padding: 0 20rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    border:none;
+    border-radius: 5rpx;
+    font-size: 26rpx;
+    float: right;
+    margin-left: 10rpx;
+}
+.cancel{
+    color: #333333;
+    background: #fff;
+}
+.go-pay{
+    background: #e02128;
+    color: #fff;
+}
+.order_type{
+    float: left;
+    font-size: 26rpx;
+    color: #df2127;
+    height: 50rpx;
+    line-height: 50rpx;
+}
+.empty-order{
+    padding: 100rpx 0;
+    text-align: center;
+    font-size: 30rpx;
+    color: #666666;
+    font-weight: blod;
+}
+.empty-order image{
+    display: block;
+    width: 194rpx;
+    height: 150rpx;
+    margin: 0 auto 20rpx;
+}

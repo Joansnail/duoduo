@@ -1,0 +1,116 @@
+<!--订单详情头部不同的状态-->
+<block wx:if="{{orderDetail.status == 1}}">
+    <view class="head">
+        等待买家付款
+        <image src="https://static.sesine.com/mina/images/pendingpay.svg"></image>
+    </view>
+</block>
+<block wx:elif="{{orderDetail.status == 2}}">
+    <view class="head">
+        拼团还未成功
+        <image src="https://static.sesine.com/mina/images/pengingteam.svg"></image>
+    </view>
+</block>
+<block wx:elif="{{orderDetail.status == 3}}">
+    <view class="head">
+        拼团成功，等待发货
+        <image src="https://static.sesine.com/mina/images/pengship.svg"></image>
+    </view>
+</block>
+<block wx:elif="{{orderDetail.status == 4 || orderDetail.status == 5}}">
+    <block wx:if="{{orderDetail.refund_status == 1}}">
+        <view class="head">
+            退款中
+            <image src="https://static.sesine.com/mina/images/pengingcomment.svg"></image>
+        </view>
+    </block>
+    <block wx:elif="{{orderDetail.refund_status == 2}}">
+        <view class="head">
+            退款成功
+            <image src="https://static.sesine.com/mina/images/pengingcomment.svg"></image>
+        </view>
+    </block>
+    <block wx:else>
+        <block wx:if="{{orderDetail.status == 4}}">
+            <view class="head">
+                卖家已发货，等待收货
+                <image src="https://static.sesine.com/mina/images/pengingget.svg"></image>
+            </view>
+        </block>
+        <block wx:elif="{{orderDetail.status == 5}}">
+            <view class="head">
+                交易成功
+                <image src="https://static.sesine.com/mina/images/pengingcomment.svg"></image>
+            </view>
+        </block>
+    </block>
+</block>
+<block wx:elif="{{orderDetail.status == 6}}">
+    <view class="head">
+        交易已取消
+        <image src="https://static.sesine.com/mina/images/pengingcomment.svg"></image>
+    </view>
+</block>
+
+
+<!--订单详情头部不同的状态-->
+<view class="order_info">
+    <view class="name">{{orderDetail.name}} {{orderDetail.phone}}</view>
+    <view class="address">{{orderDetail.address}}</view>
+</view>
+<view class="product_wrap">
+    <view class="product_info clearfix">
+        <image src="{{orderDetail.pic}}"></image>
+        <view class="title">{{orderDetail.title}}</view>
+        <view class="price">￥{{orderDetail.price}}</view>
+        <view class="num">X{{orderDetail.num}}</view>
+        <!--根据订单状态判断是否有团详情和申请退款的按钮-->
+        <block wx:if="{{orderDetail.status == 2 || orderDetail.status == 3}}">
+            <!--<button class="info_btn2">申请退款</button>-->
+            <button class="info_btn">查看团详情</button>
+        </block>
+        <block wx:elif="{{orderDetail.status == 4 || orderDetail.status == 5}}">
+            <button class="info_btn2" bindtap="viewRefund" data-id="{{id}}">申请退款</button>
+            <button class="info_btn">查看团详情</button>
+        </block>
+        <!--根据订单状态判断是否有团详情和申请退款的按钮-->
+    </view>
+    <view class="pay_price">实付： ￥{{orderDetail.total_amount}}（免运费）</view>
+    <view class="phone" bindtap="makeCall">拨打电话</view>
+</view>
+<view class="add_info">
+    <view class="order_num">订单编号：{{orderDetail.order_num}}</view>
+    <view class="pay_way">支付方式：{{orderDetail.payment}}</view>
+    <view class="order_time">下单时间：{{orderDetail.order_time}}</view>
+    <block wx:if="{{orderDetail.status == 3}}">
+        <view class="order_time">成团时间：{{orderDetail.team_time}}</view>
+    </block>
+    <block wx:elif="{{orderDetail.status == 4}}">
+        <view class="order_time">成团时间：{{orderDetail.team_time}}</view>
+        <view class="order_time">发货时间：{{orderDetail.shipping_time}}</view>
+    </block>
+    <block wx:elif="{{orderDetail.status == 5}}">
+        <view class="order_time">成团时间：{{orderDetail.team_time}}</view>
+        <view class="order_time">发货时间：{{orderDetail.shipping_time}}</view>
+        <view class="order_time">成交时间：{{orderDetail.end_time}}</view>
+    </block>
+</view>
+<!--不同状态底部按钮不同的判断-->
+<block wx:if="{{orderDetail.status == 1}}">
+    <view class="button clearfix">
+        <button class="go-pay">去支付</button>
+        <button class="cancel">取消订单</button>
+    </view>
+</block>
+<block wx:elif="{{orderDetail.status == 2}}">
+    <view class="button clearfix">
+        <button class="go-pay">邀请好友拼团</button>
+    </view>
+</block>
+<block wx:elif="{{orderDetail.status == 5}}">
+    <view class="button clearfix">
+        <button class="go-pay" bindtap="viewStar" data-id="{{id}}">评价</button>
+        <button class="apply_return" bindtap="viewRefund" data-id="{{id}}">申请退款</button>
+    </view>
+</block>
+<!--不同状态底部按钮不同的判断-->

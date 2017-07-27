@@ -1,0 +1,148 @@
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+.head{
+    height: 180rpx;
+    line-height: 180rpx;
+    background: #e02128;
+    font-size: 30rpx;
+    color: #fff;
+    padding:0 50rpx;
+    position: relative;
+}
+.head image{
+    width: 150rpx;
+    height: 90rpx;
+    position: absolute;
+    top:50%;
+    margin-top: -45rpx;
+    right: 50rpx;
+}
+.order_info{
+    padding: 25rpx 50rpx;
+    background: #fff;
+    font-size: 26rpx;
+    color: #666666;
+}
+.name{
+    margin-bottom: 10rpx;
+}
+.product_wrap{
+    background: #fff;
+}
+.product_info{
+    position: relative;
+    padding:20rpx;
+    border-bottom: 1rpx solid #e5e5e5;
+    border-top: 1rpx solid #e5e5e5;
+    margin-top: 15rpx;
+}
+.product_info image{
+    width: 200rpx;
+    height: 150rpx;
+    float: left;
+    margin-right: 15rpx;
+}
+.title{
+    font-size: 26rpx;
+    color: #333333;
+    padding-right: 100rpx;
+}
+.price{
+    font-size: 26rpx;
+    color: #333333;
+    position: absolute;
+    top:20rpx;
+    right: 20rpx;
+}
+.num{
+    font-size: 22rpx;
+    color: #999999;
+    position: absolute;
+    top:70rpx;
+    right: 20rpx;
+}
+.pay_price{
+    font-size: 26rpx;
+    color: #333333;
+    padding:20rpx 0;
+    text-align: right;
+    border-bottom: 1rpx solid #e5e5e5;
+}
+.phone{
+    text-align: center;
+    font-size: 26rpx;
+    color: #333333;
+    height: 80rpx;
+    line-height: 80rpx;
+    position: relative;
+    background: url(https://static.sesine.com/mina/images/phone.svg) no-repeat 270rpx center;
+    background-size: 36rpx 36rpx;
+}
+.add_info{
+    padding:20rpx;
+    background: #fff;
+    margin-top: 10rpx;
+    font-size: 26rpx;
+    color: #999999;
+}
+.add_info view{
+    margin-bottom: 20rpx;
+}
+
+.button{
+    padding: 20rpx;
+    border-bottom: 1rpx solid #e5e5e5;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.button button{
+    padding: 0 20rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    border:none;
+    border-radius: 5rpx;
+    font-size: 26rpx;
+    float: right;
+    margin-left: 10rpx;
+}
+.cancel{
+    color: #333333;
+    background: #fff;
+}
+.go-pay{
+    background: #e02128;
+    color: #fff;
+}
+.product_info button{
+    height: 50rpx;
+    line-height: 50rpx;
+    padding:0 10rpx;
+    border: none;
+    font-size: 26rpx;
+    color: #999999;
+    float: right;
+    margin-top: 35rpx;
+    margin-left: 20rpx;
+}
+.info_btn{
+    background: #fff;
+}
+.product_info .info_btn2{
+    border:1rpx solid #e02128;
+    color: #e02128;
+    background: #fff;
+}
+.button .apply_return{
+    border:1rpx solid #e02128;
+    color: #e02128;
+    background: #fff;
+}

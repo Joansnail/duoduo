@@ -1,0 +1,378 @@
+.pic {
+    width: 750rpx;
+    height: 280rpx;
+}
+
+.header {
+    padding: 24rpx 20rpx;
+    background-color: #fff;
+}
+
+.sales-condition {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20rpx;
+}
+
+.price-info {
+    display: flex;
+    align-items: flex-end;
+}
+
+.price {
+    margin-right: 20rpx;
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #df2127;
+}
+
+.original-price {
+    font-size: 24rpx;
+    text-decoration: line-through;
+    color: #999;
+}
+
+.sales-amount {
+    color: #ccc;
+}
+
+.title {
+    margin-bottom: 20rpx;
+    font-size: 26rpx;
+}
+
+.description {
+    color: #999;
+}
+
+.tip {
+    display: flex;
+    height: 68rpx;
+    padding: 0 24rpx;
+    line-height: 68rpx;
+    background-color: #f0f0f0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.tip-item {
+    margin-right: 20rpx;
+    color: #ccc;
+}
+
+.tip-item:before {
+    content: '';
+    display: inline-block;
+    width: 20rpx;
+    height: 20rpx;
+    margin-right: 10rpx;
+    background: url("https://static.sesine.com/mina/images/tip_icon.png") no-repeat center;
+    background-size: cover;
+}
+
+.group-tip {
+    height: 68rpx;
+    padding: 0 24rpx;
+    line-height: 68rpx;
+    background-color: #fff;
+    color: #ff931f;
+}
+
+.group-info {
+    height: 68rpx;
+    padding: 0 24rpx;
+    line-height: 68rpx;
+    background-color: #f0f0f0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    color: #999;
+}
+
+.group {
+    background-color: #fff;
+}
+
+.group-item {
+    box-sizing: border-box;
+    width: 750rpx;
+    height: 150rpx;
+    padding: 25rpx 20rpx;
+    overflow: hidden;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.group-item-wrap {
+    position: relative;
+    width: 700rpx;
+    height: 100rpx;
+    border-radius: 100rpx;
+    border: 1px solid #ff931f;
+}
+
+.group-leader-avatar {
+    position: absolute;
+    width: 120rpx;
+    height: 120rpx;
+    top: -10rpx;
+    left: -1px;
+    border-radius: 120rpx;
+    border: 1px solid #ff931f;
+    background-color: #fff;
+}
+
+.group-btn {
+    position: absolute;
+    right: -1px;
+    top: 0;
+    width: 150rpx;
+    height: 100rpx;
+    text-align: center;
+    border-radius: 0 100rpx 100rpx 0;
+    font-weight: bold;
+    line-height: 100rpx;
+    background-color: #ff931f;
+    color: #fff;
+}
+
+.group-leader-name, .group-leader-city, .group-remain, .group-remain-time, .group-btn {
+    position: absolute;
+}
+
+.group-leader-name {
+    left: 140rpx;
+    top: 20rpx;
+}
+
+.group-remain {
+    right: 170rpx;
+    top: 20rpx;
+    color: #df2127;
+}
+
+.group-leader-city {
+    left: 140rpx;
+    bottom: 12rpx;
+    color: #999;
+}
+
+.group-remain-time {
+    right: 170rpx;
+    bottom: 12rpx;
+    color: #999;
+}
+
+.comment-title {
+    display: flex;
+    justify-content: space-between;
+    height: 68rpx;
+    padding: 0 24rpx;
+    margin-top: 20rpx;
+    line-height: 68rpx;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.comment-list {
+    background-color: #fff;
+}
+
+.comment-item {
+    padding: 20rpx;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.comment-userinfo {
+    display: flex;
+    margin-bottom: 20rpx;
+}
+
+.comment-avatar {
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50rpx;
+    margin-right: 10rpx;
+}
+
+.detail::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100rpx;
+}
+
+.detail-pic {
+    display: block;
+}
+
+.bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100rpx;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+}
+
+.bar-btn {
+    width: 96rpx;
+    height: 100rpx;
+    text-align: center;
+    line-height: 140rpx;
+    border-right: 1px solid #ccc;
+}
+.bar-favorite{
+    width: 96rpx;
+    height: 100rpx;
+    text-align: center;
+    /*line-height: 140rpx;*/
+    border-right: 1px solid #ccc;
+    background: #fff;
+}
+.bar-btn-home {
+    background: url("https://static.sesine.com/mina/images/home.png") no-repeat center 20rpx;
+    background-size: 28rpx;
+}
+
+.bar-btn-service {
+    background: url("https://static.sesine.com/mina/images/contact.png") no-repeat center 20rpx;
+    background-size: 28rpx;
+}
+
+.bar-btn-favorite {
+    width: 28rpx;
+    height: 28rpx;
+    margin: 20rpx auto 5rpx;
+    background: url("https://static.sesine.com/mina/images/collect.png") no-repeat center center;
+    background-size: 28rpx;
+    
+}
+.favorite-on{
+    background-color: red;
+}
+.buy-single, .buy-group {
+    width: 230rpx;
+    height: 100rpx;
+    padding: 10rpx;
+    text-align: center;
+    color: #fff;
+    font-size: 30rpx;
+    font-weight: bold;
+}
+
+.buy-single {
+    background-color: #fe939d;
+}
+
+.buy-group {
+    background-color: #df2127;
+}
+
+.mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.property {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+    width: 100%;
+    height: 700rpx;
+    background-color: #fff;
+}
+
+.property-item {
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    padding: 20rpx;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.property-item-title {
+    display: inline-block;
+    margin-bottom: 20rpx;
+    font-size: 26rpx;
+    color: #666;
+}
+
+.intro {
+    display: flex;
+}
+
+.thumb {
+    width: 156rpx;
+    height: 110rpx;
+    margin-right: 20rpx;
+}
+
+.sku {
+    display: flex;
+}
+
+.sku-item {
+    width: 160rpx;
+    height: 50rpx;
+    margin-right: 20rpx;
+    margin-bottom: 20rpx;
+    text-align: center;
+    line-height: 50rpx;
+    color: #999;
+    border: 1px solid #ccc;
+    border-radius: 6rpx;
+}
+
+.sku-item-active {
+    background-color: #ff931f;
+    border: 1px solid #ff931f;
+    color: #fff;
+}
+
+.num-choose {
+    width: 160rpx;
+    height: 40rpx;
+    display: flex;
+    float: right;
+}
+
+.num-reduce, .num-add {
+    width: 50rpx;
+    height: 40rpx;
+    text-align: center;
+    line-height: 40rpx;
+    background-color: #e5e5e5;
+    border-radius: 6rpx;
+    color: #999;
+}
+
+.num {
+    width: 60rpx;
+    height: 40rpx;
+    text-align: center;
+    line-height: 40rpx;
+}
+
+.buy-confirm-btn {
+    position: absolute;
+    bottom: 30rpx;
+    left: 50%;
+    width: 650rpx;
+    height: 78rpx;
+    margin-left: -325rpx;
+    text-align: center;
+    line-height: 78rpx;
+    font-size: 30rpx;
+    font-weight: bold;
+    background-color: #df2127;
+    border-radius: 6rpx;
+    color: #fff;
+}

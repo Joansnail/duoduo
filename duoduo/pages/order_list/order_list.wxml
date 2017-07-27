@@ -1,0 +1,58 @@
+<view class="status_list clearfix">
+    <view class="{{orderStatus == '0'? 'onIt':''}}" data-status="0"  bindtap="changeStatus">全部</view>
+    <view class="{{orderStatus == 1? 'onIt':''}}" data-status="1" bindtap="changeStatus">待付款</view>
+    <view class="{{orderStatus == 2? 'onIt':''}}" data-status="2" bindtap="changeStatus">待成团</view>
+    <view class="{{orderStatus == 3? 'onIt':''}}" data-status="3" bindtap="changeStatus">待发货</view>
+    <view class="{{orderStatus == 4? 'onIt':''}}" data-status="4" bindtap="changeStatus">待收货</view>
+    <view class="{{orderStatus == 5? 'onIt':''}}" data-status="5" bindtap="changeStatus">待评价</view>
+</view> 
+<view class="goods_list">
+    <block wx:if="{{orderList.length > 0}}">
+        <block wx:for="{{orderList}}" wx:for-index="orderIndex" wx:for-item="orderItem">
+            <view class="goods" data-status="{{orderItem.status}}" data-id="{{orderItem.id}}" bindtap="viewOrder">
+                <view class="info clearfix">
+                    <image src="{{orderItem.pic}}"></image>
+                    <view class="title">{{orderItem.title}}</view>
+                    <view class="price">{{orderItem.price}}</view>
+                    <view class="num">X1</view>
+                </view>
+                <view class="pay_price">实付： ￥158（免运费）</view>
+                <block wx:if="{{orderItem.status == 1}}">
+                    <view class="button clearfix">
+                        <view class="order_type">待付款</view>
+                        <button class="go-pay">去支付</button>
+                        <button class="cancel">取消订单</button>
+                    </view>
+                </block>
+                <block wx:elif="{{orderItem.status == 2}}">
+                    <view class="button clearfix">
+                        <view class="order_type">拼团中</view>
+                        <button class="go-pay">邀请好友拼团</button>
+                    </view>
+                </block>
+                <block wx:elif="{{orderItem.status == 3}}">
+                    <view class="button clearfix">
+                        <view class="order_type">已成团，待发货</view>
+                    </view>
+                </block>
+                <block wx:elif="{{orderItem.status == 4}}">
+                    <view class="button clearfix">
+                        <view class="order_type">卖家已发货</view>
+                        <button class="go-pay">确认收货</button>
+                        <button class="cancel" catchtap="viewLogistics" data-id="{{orderItem.id}}">查看物流</button>
+                    </view>
+                </block>
+                <block wx:elif="{{orderItem.status == 5}}">
+                    <view class="button clearfix">
+                        <view class="order_type">交易已成功</view>
+                        <button class="go-pay" catchtap="viewStar" data-id="{{orderItem.id}}">评价</button>
+                        <button class="cancel" catchtap="viewRefund" data-id="{{orderItem.id}}">申请退款</button>
+                    </view>
+                </block>
+            </view>
+        </block>
+    </block>
+    <block wx:else>
+        <view class="empty-order"><image src="https://static.sesine.com/mina/images/no-order.svg"></image>您还没有相关订单</view>
+    </block>
+</view>

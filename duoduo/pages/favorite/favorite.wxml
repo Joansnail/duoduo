@@ -1,0 +1,23 @@
+<view class="favorite">
+    <block wx:if="{{favorite.length > 0}}">
+        <block wx:for="{{favorite}}" wx:for-item="fovoriteItem" wx:for-index="fovoriteIndex" wx:key="fovorite">
+            <view class="favorite-item">
+                <image class="product-cover" src="{{fovoriteItem.pic}}"></image>
+                <view class="product-intro">
+                    <view class="product-title">{{fovoriteItem.title}}</view>
+                    <view class="group-num">{{fovoriteItem.num}}人团</view>
+                    <view class="favorite-item-ft">
+                        <view class="product-price">{{fovoriteItem.price}}</view>
+                        <view class="favorite-item-btn">
+                            <view class="cancel-favorite" bindtap="cancel" data-index="{{fovoriteIndex}}" data-id="{{fovoriteItem.id}}">取消收藏</view>
+                            <view class="make-group" bindtap="openTeam" data-id="{{fovoriteItem.id}}">一键开团</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </block>
+    <block wx:else>
+        <view class="empty-order"><image src="https://static.sesine.com/mina/images/no-order.svg"></image>您还没有收藏</view>
+    </block>
+</view>
